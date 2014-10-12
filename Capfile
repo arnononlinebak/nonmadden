@@ -5,7 +5,7 @@ server 'www.nonmadden.com', :app
 set :user, 'root'
 set :application, "config"
 set :application_user, 'root'
-set :repository,  "git@github.com:nonmadden/nonmadden.git"
+set :repository,  "https://nonmadden:Arnon007@github.com/nonmadden/nonmadden.git"
 
 after 'deploy', 'deploy:reload'
 
