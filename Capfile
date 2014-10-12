@@ -5,7 +5,7 @@ server 'www.nonmadden.com', :app
 set :user, 'root'
 set :application, "config"
 set :application_user, 'root'
-set :repository,  "https://github.com/arnononline/ohmpieng.git"
+set :repository,  "git@github.com:nonmadden/nonmadden.git"
 
 after 'deploy', 'deploy:reload'
 
@@ -18,7 +18,7 @@ namespace :deploy do
   task :setup, role: :app do
   	run "sudo mkdir -p /var/config/"
     run "git init /var/config/"
-    # run "git remote add origin https://arnononline:f537b1ff0bd7298dee49257f4c8de1191207d8b8@github.com/arnononline/nonmadden.git"
+    run "sudo ln -s /var/config/nonmadden /etc/nginx/sites-available/nonmadden"
   end
 
   task :start, role: :app do
