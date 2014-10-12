@@ -1,7 +1,7 @@
 require 'recap/recipes/static'
 
 set :deploy_to, "/var/config"
-server 'ohmpieng.org', :app
+server 'www.nonmadden.com', :app
 set :user, 'root'
 set :application, "config"
 set :application_user, 'root'
