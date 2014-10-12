@@ -11,7 +11,7 @@ server {
   server_name www.nonmadden.com;
   root  /var/www/blog;
   index index.html index.php;
-  include /etc/nginx/php-fpm;
+  include /var/config/libs/php-fpm;
   access_log /var/log/nonmadden.log  combined;
 
   location / {
